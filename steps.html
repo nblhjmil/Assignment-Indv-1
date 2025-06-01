@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Roadmap | Nabilah's Journey</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #b08d57;
+      --light: #f8f5f0;
+      --dark: #1a1a1a;
+      --text: #333333;
+      --accent: #8c6d46;
+      --light-accent: #e6dfd3;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background-color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23b08d57" stroke-width="0.5" opacity="0.1"/></svg>');
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* ===== HEADER ===== */
+    .site-header {
+      background-color: var(--light);
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+    
+    .logo::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--secondary);
+      margin-top: 5px;
+    }
+    
+    .site-nav {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      padding: 5px 0;
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover {
+      color: var(--secondary);
+    }
+    
+    .nav-link.active {
+      color: var(--secondary);
+    }
+    
+    .nav-link.active::after,
+    .nav-link:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--secondary);
+      transition: var(--transition);
+    }
+    
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
+    
+    /* ===== STEPS SECTION ===== */
+    .steps-hero {
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .steps-hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .steps-hero h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .steps-hero p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+    
+    .timeline-container {
+      position: relative;
+      padding: 80px 0 40px;
+    }
+    
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 90%;
+      width: 3px;
+      background: var(--secondary);
+      z-index: -1;
+      top: 80px;
+    }
+    
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .step-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 35px;
+      position: relative;
+      border: 1px solid var(--light-accent);
+      transition: var(--transition);
+    }
+    
+    .step-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .step-number {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border: 3px solid var(--light);
+    }
+    
+    .step-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .step-icon {
+      flex-shrink: 0;
+      width: 70px;
+      height: 70px;
+      background: var(--light-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--secondary);
+      margin-right: 25px;
+    }
+    
+    .step-title {
+      flex-grow: 1;
+    }
+    
+    .step-title h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    
+    .step-timeline {
+      font-style: italic;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+    
+    .step-content {
+      background: rgba(176, 141, 87, 0.05);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    
+    .step-content ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    
+    .step-content li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      position: relative;
+    }
+    
+    .step-content li:before {
+      content: "•";
+      color: var(--secondary);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    
+    /* ===== PERSONAL APPROACH SECTION ===== */
+    .approach-section {
+      padding: 80px 0;
+      background: linear-gradient(rgba(248, 245, 240, 0.9), rgba(248, 245, 240, 0.9)), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="%23b08d57" stroke-width="1" opacity="0.1"/></svg>');
+      background-size: 300px;
+      position: relative;
+    }
+    
+    .approach-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    
+    .approach-text {
+      padding: 30px;
+    }
+    
+    .approach-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .approach-text h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .approach-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .motto-box {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      border-top: 4px solid var(--secondary);
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .motto-box h3 {
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+      color: var(--secondary);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .motto-box h3::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: var(--secondary);
+    }
+    
+    .quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--primary);
+      margin-bottom: 30px;
+      line-height: 1.4;
+    }
+    
+    .quote::before, .quote::after {
+      content: '"';
+      color: var(--secondary);
+      font-size: 2.5rem;
+      line-height: 0;
+      vertical-align: middle;
+    }
+    
+    .author {
+      font-size: 1.1rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    
+    /* ===== TIMELINE DECORATION ===== */
+    .timeline-decoration {
+      position: absolute;
+      top: 50px;
+      right: 5%;
+      font-size: 8rem;
+      color: var(--light-accent);
+      z-index: -1;
+      transform: rotate(15deg);
+    }
+    
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 30px 0;
+      text-align: center;
+    }
+    
+    .site-footer p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      .steps-hero h1 {
+        font-size: 2.8rem;
+      }
+      
+      .approach-container {
+        gap: 40px;
+      }
+      
+      .quote {
+        font-size: 1.6rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .steps-hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .timeline-line {
+        display: none;
+      }
+      
+      .step-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .step-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      
+      .approach-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .approach-text {
+        padding: 20px 0;
+      }
+      
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--light);
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+      }
+      
+      .site-nav.active {
+        display: flex;
+      }
+      
+      .nav-link {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .steps-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+      }
+      
+      .step-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+      
+      .step-title h3 {
+        font-size: 1.4rem;
+      }
+      
+      .quote {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Decorative elements -->
+  <div class="timeline-decoration">
+    <i class="fas fa-feather-alt"></i>
+  </div>
+  
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Nabilah's Journey</a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="steps.html" class="nav-link active">Steps</a>
+        <a href="inspiration.html" class="nav-link">Inspiration</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== STEPS HERO ===== -->
+  <section class="steps-hero">
+    <div class="container">
+      <h1>My Step-by-Step Guide to Success</h1>
+      <p>Here's my comprehensive roadmap to achieving my career dreams in digital marketing and event emceeing. Each step is carefully planned to build expertise and create opportunities.</p>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE SECTION ===== -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="container">
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="step-title">
+              <h3>Complete My New Media Communication Degree</h3>
+              <div class="step-timeline">Current - 2026</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Excel in all coursework related to mass communication</li>
+              <li>Focus on digital marketing and corporate communication subjects</li>
+              <li>Maintain excellent grades to qualify for competitive internships</li>
+              <li>Participate actively in university media and marketing projects</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-hashtag"></i>
+            </div>
+            <div class="step-title">
+              <h3>Build My Digital Marketing Skills</h3>
+              <div class="step-timeline">Ongoing</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Continue creating content on TikTok and Instagram</li>
+              <li>Master live selling techniques and audience engagement</li>
+              <li>Learn advanced social media marketing strategies</li>
+              <li>Study successful digital marketing campaigns</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="step-title">
+              <h3>Gain Practical Experience Through Freelancing</h3>
+              <div class="step-timeline">Ongoing</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Continue working as backstage crew for networking</li>
+              <li>Take on more media marketing freelance projects</li>
+              <li>Build a portfolio of successful campaigns and content</li>
+              <li>Document all achievements and learnings</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-microphone-alt"></i>
+            </div>
+            <div class="step-title">
+              <h3>Develop My Emceeing Skills</h3>
+              <div class="step-timeline">2025-2026</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Start with university program hosting</li>
+              <li>Volunteer for wedding emceeing opportunities</li>
+              <li>Practice public speaking and stage presence</li>
+              <li>Create demo reels of my emceeing work</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="step-title">
+              <h3>Secure Strategic Internships</h3>
+              <div class="step-timeline">2025-2026</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Apply for internships at Shopee and TikTok in KL Sentral</li>
+              <li>Start with smaller companies using these platforms if needed</li>
+              <li>Focus on digital marketing and social media roles</li>
+              <li>Build professional relationships and mentorships</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 6 -->
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="step-title">
+              <h3>Build My Professional Network</h3>
+              <div class="step-timeline">Ongoing</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Attend marketing events and seminars in KL</li>
+              <li>Connect with industry professionals on LinkedIn</li>
+              <li>Join marketing and media communities</li>
+              <li>Maintain relationships with university alumni</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 7 -->
+        <div class="step-card">
+          <div class="step-number">7</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <div class="step-title">
+              <h3>Create a Strong Personal Brand</h3>
+              <div class="step-timeline">2025-2027</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Develop a professional online presence</li>
+              <li>Showcase both marketing and emceeing skills</li>
+              <li>Build a portfolio website with my best work</li>
+              <li>Establish myself as a dual-skilled professional</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Step 8 -->
+        <div class="step-card">
+          <div class="step-number">8</div>
+          <div class="step-header">
+            <div class="step-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="step-title">
+              <h3>Launch My Dual Career</h3>
+              <div class="step-timeline">2026-2028</div>
+            </div>
+          </div>
+          <div class="step-content">
+            <ul>
+              <li>Apply for full-time marketing positions</li>
+              <li>Continue emceeing as a side business</li>
+              <li>Eventually balance both careers successfully</li>
+              <li>Become a role model for others with multiple passions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERSONAL APPROACH SECTION ===== -->
+  <section class="approach-section">
+    <div class="container">
+      <div class="approach-container">
+        <div class="approach-text">
+          <h2>My Personal Learning Approach</h2>
+          <p>What makes my journey unique is combining theoretical knowledge with practical experience. My background in business administration, current studies in new media communication, and hands-on experience in content creation and event work give me a well-rounded foundation.</p>
+          <p>I believe in learning from those who've successfully navigated similar paths, especially role models like Sis Madu and Tun Laila who show that passion and dedication can create opportunities regardless of your original academic focus.</p>
+        </div>
+        <div class="approach-image">
+          <div class="motto-box">
+            <h3>My Personal Motto</h3>
+            <div class="quote">Success comes from combining passion with practical skills, staying authentic while continuously learning, and building genuine connections in both the marketing and entertainment industries.</div>
+            <div class="author">- Nabilah</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Nabilah's Career Journey</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    
+    navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

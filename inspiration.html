@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspiration & Resources | Nabilah's Journey</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #b08d57;
+      --light: #f8f5f0;
+      --dark: #1a1a1a;
+      --text: #333333;
+      --accent: #8c6d46;
+      --light-accent: #e6dfd3;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background-color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23b08d57" stroke-width="0.5" opacity="0.1"/></svg>');
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* ===== HEADER ===== */
+    .site-header {
+      background-color: var(--light);
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+    
+    .logo::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--secondary);
+      margin-top: 5px;
+    }
+    
+    .site-nav {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      padding: 5px 0;
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover {
+      color: var(--secondary);
+    }
+    
+    .nav-link.active {
+      color: var(--secondary);
+    }
+    
+    .nav-link.active::after,
+    .nav-link:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--secondary);
+      transition: var(--transition);
+    }
+    
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
+    
+    /* ===== HERO SECTION ===== */
+    .inspiration-hero {
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .inspiration-hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .inspiration-hero h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .inspiration-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+    
+    /* ===== PORTRAITS GALLERY ===== */
+    .gallery-section {
+      padding: 60px 0;
+      position: relative;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      display: inline-block;
+      position: relative;
+    }
+    
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+      height: 400px;
+      background-color: var(--light-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 30px 20px 20px;
+      transform: translateY(100%);
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+    
+    .gallery-overlay h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: white;
+    }
+    
+    .gallery-overlay p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    
+    /* ===== ROLE MODELS SECTION ===== */
+    .role-models {
+      padding: 80px 0;
+      background-color: rgba(176, 141, 87, 0.05);
+      position: relative;
+    }
+    
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+    
+    .model-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      position: relative;
+      border: 1px solid var(--light-accent);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .model-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .model-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--light-accent);
+    }
+    
+    .model-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--light-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--secondary);
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+    
+    .model-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+    
+    .model-info p {
+      color: var(--secondary);
+      font-weight: 500;
+    }
+    
+    .model-description {
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+    
+    .model-description p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    
+    .model-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .model-link {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      border: 2px solid var(--primary);
+      font-size: 0.95rem;
+    }
+    
+    .model-link:hover {
+      background-color: transparent;
+      color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(44, 62, 80, 0.15);
+    }
+    
+    .model-link i {
+      margin-left: 8px;
+      font-size: 0.9rem;
+    }
+    
+    /* ===== KEY LEARNING SECTION ===== */
+    .learning-section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .learning-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      padding: 50px;
+      border-top: 4px solid var(--secondary);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .learning-container h3 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: var(--secondary);
+      text-align: center;
+      position: relative;
+    }
+    
+    .learning-container h3::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: var(--secondary);
+    }
+    
+    .learning-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .learning-point {
+      margin-bottom: 30px;
+    }
+    
+    .learning-point h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+    }
+    
+    .learning-point h4 i {
+      margin-right: 12px;
+      color: var(--secondary);
+      font-size: 1.5rem;
+    }
+    
+    .learning-point p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      padding-left: 35px;
+    }
+    
+    /* ===== RESOURCES SECTION ===== */
+    .resources-section {
+      padding: 80px 0;
+      background-color: rgba(176, 141, 87, 0.05);
+      position: relative;
+    }
+    
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+    
+    .resource-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      position: relative;
+      border: 1px solid var(--light-accent);
+      transition: var(--transition);
+    }
+    
+    .resource-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .resource-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--light-accent);
+    }
+    
+    .resource-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--light-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--secondary);
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+    
+    .resource-title h3 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+    
+    .resource-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .resource-list li {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+      font-size: 1.05rem;
+    }
+    
+    .resource-list li:before {
+      content: "•";
+      color: var(--secondary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    
+    .resource-link {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+    
+    .resource-link:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    
+    /* ===== MOTIVATION SECTION ===== */
+    .motivation-section {
+      padding: 80px 0;
+      position: relative;
+      text-align: center;
+    }
+    
+    .motivation-container {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="%23b08d57" stroke-width="1" opacity="0.1"/></svg>');
+      background-size: 300px;
+      border-radius: 10px;
+      padding: 60px 40px;
+      color: white;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .motivation-container h3 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: var(--secondary);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .motivation-container h3::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      margin-bottom: 30px;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .quote::before, .quote::after {
+      content: '"';
+      color: var(--secondary);
+      font-size: 2.5rem;
+      line-height: 0;
+      vertical-align: middle;
+    }
+    
+    .author {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+    
+    /* ===== DECORATIVE ELEMENTS ===== */
+    .ornament {
+      position: absolute;
+      opacity: 0.05;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .ornament-1 {
+      top: 10%;
+      right: 5%;
+      font-size: 15rem;
+      transform: rotate(15deg);
+    }
+    
+    .ornament-2 {
+      bottom: 15%;
+      left: 5%;
+      font-size: 12rem;
+      transform: rotate(-20deg);
+    }
+    
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 30px 0;
+      text-align: center;
+    }
+    
+    .site-footer p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      .inspiration-hero h1 {
+        font-size: 2.8rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+      
+      .learning-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .inspiration-hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .gallery-item {
+        height: 350px;
+      }
+      
+      .learning-container {
+        padding: 30px 20px;
+      }
+      
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--light);
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+      }
+      
+      .site-nav.active {
+        display: flex;
+      }
+      
+      .nav-link {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      .quote {
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .inspiration-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+      }
+      
+      .gallery-item {
+        height: 300px;
+      }
+      
+      .model-header, .resource-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .model-icon, .resource-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .model-links {
+        justify-content: center;
+      }
+      
+      .quote {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Decorative elements -->
+  <div class="ornament ornament-1">
+    <i class="fas fa-feather-alt"></i>
+  </div>
+  <div class="ornament ornament-2">
+    <i class="fas fa-crown"></i>
+  </div>
+  
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Nabilah's Journey</a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="steps.html" class="nav-link">Steps</a>
+        <a href="inspiration.html" class="nav-link active">Inspiration</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="inspiration-hero">
+    <div class="container">
+      <h1>My Inspiration & Learning Resources</h1>
+      <p>Throughout my journey, I draw inspiration from successful individuals who have paved the way in digital marketing and emceeing. Here are my role models and the resources that guide my learning.</p>
+    </div>
+  </section>
+
+  <!-- ===== PORTRAITS GALLERY ===== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Portrait Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <!-- Portrait 1 -->
+        <div class="gallery-item">
+          <img src="images/nabilah2.jpg" alt="Nabilah Portrait 2">
+          <div class="gallery-overlay">
+            <h3>Professional Portrait</h3>
+            <p>Captured during a university media event</p>
+          </div>
+        </div>
+
+        <!-- Portrait 3 -->
+        <div class="gallery-item">
+          <img src="images/nabilah4.jpg" alt="Nabilah Portrait 4">
+          <div class="gallery-overlay">
+            <h3>Live Hosting</h3>
+            <p>Engaging with audience during a live stream</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROLE MODELS SECTION ===== -->
+  <section class="role-models">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Role Models & Inspirational Figures</h2>
+      </div>
+      
+      <div class="models-grid">
+        <!-- Role Model 1 -->
+        <div class="model-card">
+          <div class="model-header">
+            <div class="model-icon">
+              <i class="fas fa-microphone-alt"></i>
+            </div>
+            <div class="model-info">
+              <h3>Sis Madu</h3>
+              <p>Event Emcee & Content Creator</p>
+            </div>
+          </div>
+          <div class="model-description">
+            <p>UIAM Gombak alumni who proves you don't need a specific degree to excel in emceeing. Her success comes from passion, practice, and personality.</p>
+          </div>
+          <div class="model-links">
+            <a href="https://www.tiktok.com/@ohmadu_" target="_blank" rel="noopener" class="model-link">
+              TikTok <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/ohmadu_/" target="_blank" rel="noopener" class="model-link">
+              Instagram <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Role Model 2 -->
+        <div class="model-card">
+          <div class="model-header">
+            <div class="model-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <div class="model-info">
+              <h3>Tun Laila (Yara Fae)</h3>
+              <p>Lawyer & Event Emcee</p>
+            </div>
+          </div>
+          <div class="model-description">
+            <p>Shows how you can excel in multiple fields with passion and personality. Balances a legal career with event hosting successfully.</p>
+          </div>
+          <div class="model-links">
+            <a href="https://www.tiktok.com/@beyarafaee" target="_blank" rel="noopener" class="model-link">
+              TikTok <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/beyarafaee/" target="_blank" rel="noopener" class="model-link">
+              Instagram <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Role Model 3 -->
+        <div class="model-card">
+          <div class="model-header">
+            <div class="model-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="model-info">
+              <h3>Michelle Smith</h3>
+              <p>Digital Marketing Expert</p>
+            </div>
+          </div>
+          <div class="model-description">
+            <p>Pioneer in social media marketing and authentic content creation. Her innovative strategies have transformed brands and inspired my approach.</p>
+          </div>
+          <div class="model-links">
+            <a href="https://www.marismith.com/" target="_blank" rel="noopener" class="model-link">
+              Website <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Role Model 4 -->
+        <div class="model-card">
+          <div class="model-header">
+            <div class="model-icon">
+              <i class="fas fa-blog"></i>
+            </div>
+            <div class="model-info">
+              <h3>Making Sense of Cents</h3>
+              <p>Financial & Marketing Blog</p>
+            </div>
+          </div>
+          <div class="model-description">
+            <p>Shows how authentic storytelling builds successful online careers. A valuable resource for understanding content monetization and audience engagement.</p>
+          </div>
+          <div class="model-links">
+            <a href="https://www.makingsenseofcents.com/" target="_blank" rel="noopener" class="model-link">
+              Website <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY LEARNING SECTION ===== -->
+  <section class="learning-section">
+    <div class="container">
+      <div class="learning-container">
+        <h3>Key Learning from My Role Models</h3>
+        
+        <div class="learning-columns">
+          <div>
+            <div class="learning-point">
+              <h4><i class="fas fa-user-graduate"></i> Sis Madu & Tun Laila</h4>
+              <p>Both prove that you don't need a specific degree to excel in emceeing. Their success comes from passion, practice, and personality – qualities I'm developing through my freelance work and university events.</p>
+            </div>
+          </div>
+          
+          <div>
+            <div class="learning-point">
+              <h4><i class="fas fa-bullhorn"></i> Digital Marketing Leaders</h4>
+              <p>They show how authentic storytelling and consistent content creation can build successful careers. My experience in TikTok and Instagram live selling is building these exact skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESOURCES SECTION ===== -->
+  <section class="resources-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Essential Resources for My Career Growth</h2>
+      </div>
+      
+      <div class="resources-grid">
+        <!-- Resource Category 1 -->
+        <div class="resource-card">
+          <div class="resource-header">
+            <div class="resource-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="resource-title">
+              <h3>Digital Marketing Education</h3>
+            </div>
+          </div>
+          <ul class="resource-list">
+            <li><a href="https://skillshop.exceedlms.com/" class="resource-link" target="_blank">Google Skillshop</a> – Free digital marketing certifications</li>
+            <li><a href="https://www.facebookblueprint.com/" class="resource-link" target="_blank">Facebook Blueprint</a> – Social media advertising training</li>
+            <li><a href="https://academy.hubspot.com/" class="resource-link" target="_blank">HubSpot Academy</a> – Inbound marketing and content strategy</li>
+            <li><a href="https://www.coursera.org/" class="resource-link" target="_blank">Coursera</a> – University-level marketing courses</li>
+          </ul>
+        </div>
+        
+        <!-- Resource Category 2 -->
+        <div class="resource-card">
+          <div class="resource-header">
+            <div class="resource-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="resource-title">
+              <h3>Content Creation & Social Media</h3>
+            </div>
+          </div>
+          <ul class="resource-list">
+            <li><a href="https://www.tiktok.com/creators/creator-fund/" class="resource-link" target="_blank">TikTok Creator Fund</a> – Monetization and best practices</li>
+            <li><a href="https://business.instagram.com/" class="resource-link" target="_blank">Instagram Business Resources</a> – Live selling and engagement strategies</li>
+            <li><a href="https://www.creatoreconomy.report/" class="resource-link" target="_blank">Creator Economy Report</a> – Industry trends and insights</li>
+            <li><a href="https://www.canva.com/design-school/" class="resource-link" target="_blank">Canva Design School</a> – Visual content creation skills</li>
+          </ul>
+        </div>
+        
+        <!-- Resource Category 3 -->
+        <div class="resource-card">
+          <div class="resource-header">
+            <div class="resource-icon">
+              <i class="fas fa-microphone"></i>
+            </div>
+            <div class="resource-title">
+              <h3>Emceeing and Public Speaking</h3>
+            </div>
+          </div>
+          <ul class="resource-list">
+            <li><a href="https://www.toastmasters.org/" class="resource-link" target="_blank">Toastmasters International</a> – Public speaking development</li>
+            <li>Local Wedding and Event Companies – Hands-on experience opportunities</li>
+            <li>University Event Management Committee – Practice platform</li>
+            <li>YouTube Emcee Training Channels – Free learning resources</li>
+          </ul>
+        </div>
+        
+        <!-- Resource Category 4 -->
+        <div class="resource-card">
+          <div class="resource-header">
+            <div class="resource-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="resource-title">
+              <h3>Industry Networking Platforms</h3>
+            </div>
+          </div>
+          <ul class="resource-list">
+            <li><a href="https://www.linkedin.com/" class="resource-link" target="_blank">LinkedIn</a> – Professional networking and job opportunities</li>
+            <li>Malaysian Digital Marketing Facebook Groups – Local industry connections</li>
+            <li>Marketing Events in KL – Face-to-face networking</li>
+            <li>University Alumni Network – Career mentorship</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOTIVATION SECTION ===== -->
+  <section class="motivation-section">
+    <div class="container">
+      <div class="motivation-container">
+        <h3>My Personal Philosophy</h3>
+        <div class="quote">
+          Just like Sis Madu and Tun Laila show, you can excel in multiple areas when you stay true to your interests and work consistently toward your goals.
+        </div>
+        <div class="author">
+          My journey combines digital marketing expertise with emceeing passion – and that's what makes it uniquely mine!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Nabilah's Career Journey | Built with passion for Digital Marketing & Event Emceeing!</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    
+    navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('active');
+    });
+    
+    // Gallery hover effect for touch devices
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+      item.addEventListener('touchstart', function() {
+        this.classList.add('hover-effect');
+      });
+      
+      item.addEventListener('touchend', function() {
+        this.classList.remove('hover-effect');
+      });
+    });
+  </script>
+</body>
+</html>
